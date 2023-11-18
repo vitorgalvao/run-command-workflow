@@ -20,7 +20,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>F1B2D9DD-9385-4641-B653-E4EFFE45A9B6</string>
+				<string>AC07FA6A-4341-4AFC-AE7C-035665D013A9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -360,6 +360,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>20EC4CEE-27B6-4B91-88C0-D70194E55ADF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AC07FA6A-4341-4AFC-AE7C-035665D013A9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FFF9C1B9-5961-4167-8625-CB5393E611D8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -938,15 +951,42 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>behaviour</key>
+				<integer>0</integer>
+				<key>footertext</key>
+				<string></string>
+				<key>inputfile</key>
+				<string></string>
+				<key>inputtype</key>
+				<integer>0</integer>
+				<key>loadingtext</key>
+				<string></string>
+				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>stackview</key>
+				<false/>
+				<key>windowheight</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.userinterface.text</string>
+			<key>uid</key>
+			<string>FFF9C1B9-5961-4167-8625-CB5393E611D8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>tasksettings</key>
 				<dict/>
 				<key>taskuid</key>
-				<string>com.alfredapp.automation.core/files-and-folders/file.quicklook</string>
+				<string>com.alfredapp.automation.core/files-and-folders/file.read</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.automation.task</string>
 			<key>uid</key>
-			<string>F1B2D9DD-9385-4641-B653-E4EFFE45A9B6</string>
+			<string>AC07FA6A-4341-4AFC-AE7C-035665D013A9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1280,12 +1320,12 @@ fi</string>
 	<key>readme</key>
 	<string>## Usage
 
-Run shell commands without opening a terminal via the `cmd` keyword. Your shell’s configuration files will be loaded, making your custom aliases, functions, and more available to the environment. Commands execute relative to the frontmost Finder window to allow quick changes on the current working folder. Exit status is shown as a notification and output in a Quick Look window.
+Run shell commands without opening a terminal via the `cmd` keyword. Your shell’s configuration files will be loaded, making your custom aliases, functions, and more available to the environment. Commands execute relative to the frontmost Finder window to allow quick changes on the current working folder. Exit status is shown as a notification and output in a [Text View](https://www.alfredapp.com/help/workflows/userinterface/text/).
 
 ![Sending command](images/about/cmd.png)
 
 * &lt;kbd&gt;↩&lt;/kbd&gt;: Run the command.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Run command but do not open output in Quick Look.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Run command but do not open output in Text View.
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Show command history to rerun a command.
 
 Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to send files and text as arguments to a command. If the placeholder from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/) is present in the text, it will be replaced with your arguments, otherwise they are appended to the end.
@@ -1476,6 +1516,13 @@ The same modifiers apply. Separate command histories are created for commands ra
 			<key>ypos</key>
 			<real>265</real>
 		</dict>
+		<key>AC07FA6A-4341-4AFC-AE7C-035665D013A9</key>
+		<dict>
+			<key>xpos</key>
+			<real>2480</real>
+			<key>ypos</key>
+			<real>405</real>
+		</dict>
 		<key>B702D114-8BFE-424F-84FC-F66256F0BFBA</key>
 		<dict>
 			<key>xpos</key>
@@ -1520,10 +1567,10 @@ The same modifiers apply. Separate command histories are created for commands ra
 			<key>ypos</key>
 			<real>135</real>
 		</dict>
-		<key>F1B2D9DD-9385-4641-B653-E4EFFE45A9B6</key>
+		<key>FFF9C1B9-5961-4167-8625-CB5393E611D8</key>
 		<dict>
 			<key>xpos</key>
-			<real>2480</real>
+			<real>2655</real>
 			<key>ypos</key>
 			<real>405</real>
 		</dict>
