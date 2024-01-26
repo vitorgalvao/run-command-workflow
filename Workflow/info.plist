@@ -637,6 +637,12 @@ function run(argv) {
     $(historyFile).stringByDeletingLastPathComponent.js,
     true, undefined, undefined)
 
+  // If not saving history, delete file if it exists and return
+  if (historySize === 0) {
+    fileManager.removeItemAtPathError(historyFile, undefined)
+    return
+  }
+
   // Prepend to history
   const history = fileManager.fileExistsAtPath(historyFile) ?
     JSON.parse(readFile(historyFile)) :
@@ -961,6 +967,8 @@ fi</string>
 				<integer>0</integer>
 				<key>loadingtext</key>
 				<string></string>
+				<key>outputmode</key>
+				<integer>0</integer>
 				<key>scriptinput</key>
 				<integer>0</integer>
 				<key>stackview</key>
@@ -1649,13 +1657,17 @@ If it is not present, arguments are appended to the end.</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>default</key>
-				<string>20</string>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
+				<key>defaultvalue</key>
+				<integer>20</integer>
+				<key>markercount</key>
+				<integer>21</integer>
+				<key>maxvalue</key>
+				<integer>100</integer>
+				<key>minvalue</key>
+				<integer>0</integer>
+				<key>onlystoponmarkers</key>
 				<false/>
-				<key>trim</key>
+				<key>showmarkers</key>
 				<true/>
 			</dict>
 			<key>description</key>
@@ -1663,7 +1675,7 @@ If it is not present, arguments are appended to the end.</string>
 			<key>label</key>
 			<string>History Size</string>
 			<key>type</key>
-			<string>textfield</string>
+			<string>slider</string>
 			<key>variable</key>
 			<string>history_size</string>
 		</dict>
