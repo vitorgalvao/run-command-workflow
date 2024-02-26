@@ -946,6 +946,8 @@ fi</string>
 			<dict>
 				<key>behaviour</key>
 				<integer>0</integer>
+				<key>fontmode</key>
+				<integer>0</integer>
 				<key>footertext</key>
 				<string></string>
 				<key>inputfile</key>
@@ -960,8 +962,6 @@ fi</string>
 				<integer>0</integer>
 				<key>stackview</key>
 				<false/>
-				<key>windowheight</key>
-				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.userinterface.text</string>
@@ -1304,9 +1304,9 @@ Run shell commands without opening a terminal via the `cmd` keyword. Your shell�
 
 ![Sending command](images/about/cmd.png)
 
-* &lt;kbd&gt;↩&lt;/kbd&gt;: Run the command.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Run command but do not open output in Text View.
-* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Show command history to rerun a command.
+* &lt;kbd&gt;↩&lt;/kbd&gt; Run the command.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Run command but do not open output in Text View.
+* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Show command history to rerun a command.
 
 Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to send files and text as arguments to a command. If the placeholder from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/) is present in the text, it will be replaced with your arguments, otherwise they are appended to the end.
 
@@ -1318,9 +1318,9 @@ The same modifiers apply. Separate command histories are created for commands ra
 
 ![Command history](images/about/history.png)
 
-* &lt;kbd&gt;↩&lt;/kbd&gt;: Run command.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Delete all command histories and saved outputs.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;): Quick Look saved output.</string>
+* &lt;kbd&gt;↩&lt;/kbd&gt; Run command.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete all command histories and saved outputs.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;) Quick Look saved output.</string>
 	<key>uidata</key>
 	<dict>
 		<key>0169CF13-E2F6-4290-9AEE-7EA0A9C36E26</key>
