@@ -453,6 +453,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>FFF9C1B9-5961-4167-8625-CB5393E611D8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>951D4EB6-F244-446B-89CC-562922C41A5F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Vítor Galvão</string>
@@ -948,8 +961,10 @@ fi</string>
 				<integer>0</integer>
 				<key>fontmode</key>
 				<integer>0</integer>
+				<key>fontsizing</key>
+				<integer>0</integer>
 				<key>footertext</key>
-				<string></string>
+				<string>↩ Copy to Clipboard</string>
 				<key>inputfile</key>
 				<string></string>
 				<key>inputtype</key>
@@ -960,6 +975,8 @@ fi</string>
 				<integer>0</integer>
 				<key>scriptinput</key>
 				<integer>0</integer>
+				<key>spellchecking</key>
+				<integer>0</integer>
 				<key>stackview</key>
 				<false/>
 			</dict>
@@ -969,6 +986,25 @@ fi</string>
 			<string>FFF9C1B9-5961-4167-8625-CB5393E611D8</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>951D4EB6-F244-446B-89CC-562922C41A5F</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1479,6 +1515,13 @@ The same modifiers apply. Separate command histories are created for commands ra
 			<real>510</real>
 			<key>ypos</key>
 			<real>740</real>
+		</dict>
+		<key>951D4EB6-F244-446B-89CC-562922C41A5F</key>
+		<dict>
+			<key>xpos</key>
+			<real>2660</real>
+			<key>ypos</key>
+			<real>405</real>
 		</dict>
 		<key>9749F3E7-D3B4-49D4-B865-745A2A64A20E</key>
 		<dict>
