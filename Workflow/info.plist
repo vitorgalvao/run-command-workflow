@@ -901,7 +901,7 @@ do
 done
 
 # Load aliases
-set_aliases='shopt -s expand_aliases'
+shopt -s expand_aliases
 
 # Run command in current Finder folder
 readonly notificator="${PWD}/notificator"
