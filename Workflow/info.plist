@@ -1356,7 +1356,7 @@ The same modifiers apply. Separate command histories are created for commands ra
 
 * &lt;kbd&gt;↩&lt;/kbd&gt; Run command.
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete all command histories and saved outputs.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;) Quick Look saved output.</string>
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; [Quick Look](https://www.alfredapp.com/help/features/previews/) saved output.</string>
 	<key>uidata</key>
 	<dict>
 		<key>0169CF13-E2F6-4290-9AEE-7EA0A9C36E26</key>
@@ -1688,8 +1688,6 @@ If it is not present, arguments are appended to the end.</string>
 			<string>history_size</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>2025.1</string>
 	<key>webaddress</key>
