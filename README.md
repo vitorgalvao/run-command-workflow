@@ -10,9 +10,9 @@ Run shell commands without opening a terminal via the `cmd` keyword. Your shell�
 
 ![Sending command](Workflow/images/about/cmd.png)
 
-* <kbd>↩&#xFE0E;</kbd> Run the command.
-* <kbd>⌘</kbd><kbd>↩&#xFE0E;</kbd> Run command but do not open output in Text View.
-* <kbd>⌥</kbd><kbd>↩&#xFE0E;</kbd> Show command history to rerun a command.
+* <kbd>↩</kbd> Run the command.
+* <kbd>⌘</kbd><kbd>↩</kbd> Run command but do not open output in Text View.
+* <kbd>⌥</kbd><kbd>↩</kbd> Show command history to rerun a command.
 
 Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to send files and text as arguments to a command. If the placeholder from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/) is present in the text, it will be replaced with your arguments, otherwise they are appended to the end.
 
@@ -24,6 +24,6 @@ The same modifiers apply. Separate command histories are created for commands ra
 
 ![Command history](Workflow/images/about/history.png)
 
-* <kbd>↩&#xFE0E;</kbd> Run command.
-* <kbd>⌘</kbd><kbd>↩&#xFE0E;</kbd> Delete all command histories and saved outputs.
-* <kbd>⌘</kbd><kbd>Y</kbd> (or tap <kbd>⇧</kbd>) Quick Look saved output.
+* <kbd>↩</kbd> Run command.
+* <kbd>⌘</kbd><kbd>↩</kbd> Delete all command histories and saved outputs.
+* <kbd>⌘</kbd><kbd>Y</kbd> [Quick Look](https://www.alfredapp.com/help/features/previews/) saved output.
