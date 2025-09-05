@@ -78,6 +78,21 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3F93A272-944E-4E7D-9A46-073383C71390</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D36F3109-AE3E-484C-9D15-3CA59586E6A8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>99A714F0-3D2D-4EF8-8B5F-72944962F4E2</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>40A5C37E-AACB-47E8-92C8-B230FB2167EF</key>
 		<array>
 			<dict>
@@ -308,7 +323,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>D36F3109-AE3E-484C-9D15-3CA59586E6A8</string>
+				<string>3F93A272-944E-4E7D-9A46-073383C71390</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -398,7 +413,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>D36F3109-AE3E-484C-9D15-3CA59586E6A8</string>
+				<string>3F93A272-944E-4E7D-9A46-073383C71390</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1013,6 +1028,38 @@ fi</string>
 				<array>
 					<dict>
 						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>.</string>
+						<key>outputlabel</key>
+						<string>Has Output</string>
+						<key>uid</key>
+						<string>99A714F0-3D2D-4EF8-8B5F-72944962F4E2</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Empty Output</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>3F93A272-944E-4E7D-9A46-073383C71390</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
 						<string>{var:discard_result}</string>
 						<key>matchcasesensitive</key>
 						<false/>
@@ -1362,7 +1409,7 @@ The same modifiers apply. Separate command histories are created for commands ra
 		<key>0169CF13-E2F6-4290-9AEE-7EA0A9C36E26</key>
 		<dict>
 			<key>xpos</key>
-			<real>2290</real>
+			<real>2420</real>
 			<key>ypos</key>
 			<real>405</real>
 		</dict>
@@ -1395,6 +1442,15 @@ The same modifiers apply. Separate command histories are created for commands ra
 			<real>1620</real>
 			<key>ypos</key>
 			<real>350</real>
+		</dict>
+		<key>3F93A272-944E-4E7D-9A46-073383C71390</key>
+		<dict>
+			<key>note</key>
+			<string>Use regex instead of empty string to avoid matching cases like a single empty line</string>
+			<key>xpos</key>
+			<real>2085</real>
+			<key>ypos</key>
+			<real>425</real>
 		</dict>
 		<key>40A5C37E-AACB-47E8-92C8-B230FB2167EF</key>
 		<dict>
@@ -1519,7 +1575,7 @@ The same modifiers apply. Separate command histories are created for commands ra
 		<key>951D4EB6-F244-446B-89CC-562922C41A5F</key>
 		<dict>
 			<key>xpos</key>
-			<real>2660</real>
+			<real>2790</real>
 			<key>ypos</key>
 			<real>405</real>
 		</dict>
@@ -1551,14 +1607,14 @@ The same modifiers apply. Separate command histories are created for commands ra
 			<key>note</key>
 			<string>Write history file</string>
 			<key>xpos</key>
-			<real>2480</real>
+			<real>2610</real>
 			<key>ypos</key>
 			<real>235</real>
 		</dict>
 		<key>D36F3109-AE3E-484C-9D15-3CA59586E6A8</key>
 		<dict>
 			<key>xpos</key>
-			<real>2105</real>
+			<real>2235</real>
 			<key>ypos</key>
 			<real>425</real>
 		</dict>
@@ -1586,7 +1642,7 @@ The same modifiers apply. Separate command histories are created for commands ra
 		<key>FFF9C1B9-5961-4167-8625-CB5393E611D8</key>
 		<dict>
 			<key>xpos</key>
-			<real>2480</real>
+			<real>2610</real>
 			<key>ypos</key>
 			<real>405</real>
 		</dict>
