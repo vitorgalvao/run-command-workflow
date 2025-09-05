@@ -585,7 +585,7 @@ if eval "${raw_command}" 2&gt;&amp;1
 then
   "${notificator}" --message "Command exit code: ${?}" --title 'Success'
 else
-  "${notificator}" --message "Command exit code: ${?}" --title 'Failure'
+  "${notificator}" --message "Command exit code: ${?}" --title 'Failure' --sound 'Basso'
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -926,7 +926,7 @@ if eval "${raw_command}" 2&gt;&amp;1
 then
   "${notificator}" --message "Command exit code: ${?}" --title 'Success'
 else
-  "${notificator}" --message "Command exit code: ${?}" --title 'Failure'
+  "${notificator}" --message "Command exit code: ${?}" --title 'Failure' --sound 'Basso'
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
