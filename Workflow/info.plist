@@ -20,7 +20,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>FFF9C1B9-5961-4167-8625-CB5393E611D8</string>
+				<string>3F93A272-944E-4E7D-9A46-073383C71390</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -78,11 +78,24 @@
 				<false/>
 			</dict>
 		</array>
-		<key>3F93A272-944E-4E7D-9A46-073383C71390</key>
+		<key>3308B85C-8522-4EBA-BCC2-2B84D871BC3E</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>D36F3109-AE3E-484C-9D15-3CA59586E6A8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3F93A272-944E-4E7D-9A46-073383C71390</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FFF9C1B9-5961-4167-8625-CB5393E611D8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -323,7 +336,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>3F93A272-944E-4E7D-9A46-073383C71390</string>
+				<string>3308B85C-8522-4EBA-BCC2-2B84D871BC3E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -413,7 +426,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>3F93A272-944E-4E7D-9A46-073383C71390</string>
+				<string>3308B85C-8522-4EBA-BCC2-2B84D871BC3E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -561,54 +574,6 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string># Load configuration files
-readonly config_files=(
-  '/etc/profile'
-  '/etc/zprofile'
-  '/etc/zshenv'
-  '/etc/zshrc'
-  "${HOME}/.profile"
-  "${HOME}/.zprofile"
-  "${HOME}/.zshenv" "${HOME}/.zshrc"
-)
-
-for config_file in "${config_files[@]}"
-do
-  [[ -f "${config_file}" ]] &amp;&amp; source "${config_file}"
-done
-
-# Run command in current Finder folder
-readonly notificator="${PWD}/notificator"
-cd "${front_window}"
-
-if eval "${raw_command}" 2&gt;&amp;1
-then
-  "${notificator}" --message "Command exit code: ${?}" --title 'Success'
-else
-  "${notificator}" --message "Command exit code: ${?}" --title 'Failure' --sound 'Basso'
-fi</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>91D9D868-3207-4223-9AA9-946296826CEF</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
 				<string>// Helpers
 function envVar(varName) {
   return $.NSProcessInfo
@@ -679,6 +644,54 @@ function run(argv) {
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>C2CF4295-5D51-4C09-B771-7D8CCFE2A571</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Load configuration files
+readonly config_files=(
+  '/etc/profile'
+  '/etc/zprofile'
+  '/etc/zshenv'
+  '/etc/zshrc'
+  "${HOME}/.profile"
+  "${HOME}/.zprofile"
+  "${HOME}/.zshenv" "${HOME}/.zshrc"
+)
+
+for config_file in "${config_files[@]}"
+do
+  [[ -f "${config_file}" ]] &amp;&amp; source "${config_file}"
+done
+
+# Run command in current Finder folder
+readonly notificator="${PWD}/notificator"
+cd "${front_window}"
+
+if eval "${raw_command}" 2&gt;&amp;1
+then
+  "${notificator}" --message "Command exit code: ${?}" --title 'Success'
+else
+  "${notificator}" --message "Command exit code: ${?}" --title 'Failure' --sound 'Basso'
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>91D9D868-3207-4223-9AA9-946296826CEF</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -835,14 +848,14 @@ fi
 				<false/>
 				<key>variables</key>
 				<dict>
-					<key>raw_command</key>
+					<key>front_window</key>
 					<string>{query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>7D3F25A1-7BE4-428A-8EAF-003404ABEF48</string>
+			<string>24E34980-03CA-4EEB-8E1C-1ADC6872DEBC</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -855,14 +868,14 @@ fi
 				<false/>
 				<key>variables</key>
 				<dict>
-					<key>front_window</key>
+					<key>raw_command</key>
 					<string>{query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>24E34980-03CA-4EEB-8E1C-1ADC6872DEBC</string>
+			<string>7D3F25A1-7BE4-428A-8EAF-003404ABEF48</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -891,6 +904,58 @@ fi
 			<string>alfred.workflow.utility.split</string>
 			<key>uid</key>
 			<string>87B96A7A-D8B3-47EF-B7A5-AC983268AAB2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>951D4EB6-F244-446B-89CC-562922C41A5F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>behaviour</key>
+				<integer>0</integer>
+				<key>fontmode</key>
+				<integer>0</integer>
+				<key>fontsizing</key>
+				<integer>0</integer>
+				<key>footertext</key>
+				<string>↩ Copy to Clipboard</string>
+				<key>inputfile</key>
+				<string></string>
+				<key>inputtype</key>
+				<integer>2</integer>
+				<key>loadingtext</key>
+				<string></string>
+				<key>outputmode</key>
+				<integer>0</integer>
+				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>spellchecking</key>
+				<integer>0</integer>
+				<key>stackview</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.userinterface.text</string>
+			<key>uid</key>
+			<string>FFF9C1B9-5961-4167-8625-CB5393E611D8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -972,63 +1037,11 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>behaviour</key>
-				<integer>0</integer>
-				<key>fontmode</key>
-				<integer>0</integer>
-				<key>fontsizing</key>
-				<integer>0</integer>
-				<key>footertext</key>
-				<string>↩ Copy to Clipboard</string>
-				<key>inputfile</key>
-				<string></string>
-				<key>inputtype</key>
-				<integer>2</integer>
-				<key>loadingtext</key>
-				<string></string>
-				<key>outputmode</key>
-				<integer>0</integer>
-				<key>scriptinput</key>
-				<integer>0</integer>
-				<key>spellchecking</key>
-				<integer>0</integer>
-				<key>stackview</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.userinterface.text</string>
-			<key>uid</key>
-			<string>FFF9C1B9-5961-4167-8625-CB5393E611D8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>951D4EB6-F244-446B-89CC-562922C41A5F</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
 						<key>inputstring</key>
-						<string></string>
+						<string>{var:command_output}</string>
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
@@ -1082,6 +1095,26 @@ fi</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>D36F3109-AE3E-484C-9D15-3CA59586E6A8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>command_output</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>3308B85C-8522-4EBA-BCC2-2B84D871BC3E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1182,6 +1215,24 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>tasksettings</key>
+				<dict>
+					<key>match_string</key>
+					<string>{var:placeholder}</string>
+				</dict>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.core/argument-processing/argument.matching</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.task</string>
+			<key>uid</key>
+			<string>629E20D0-8865-4118-AB93-28C0224024F4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>subtext</key>
@@ -1202,17 +1253,14 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>tasksettings</key>
-				<dict>
-					<key>match_string</key>
-					<string>{var:placeholder}</string>
-				</dict>
+				<dict/>
 				<key>taskuid</key>
-				<string>com.alfredapp.automation.core/argument-processing/argument.matching</string>
+				<string>com.alfredapp.automation.core/argument-processing/argument.count</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.automation.task</string>
 			<key>uid</key>
-			<string>629E20D0-8865-4118-AB93-28C0224024F4</string>
+			<string>50DB02EF-3123-437D-B459-122809AE0F35</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1239,21 +1287,6 @@ fi</string>
 			<string>1CAA79DC-4B5F-401C-910A-CFD7F264CBF2</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>tasksettings</key>
-				<dict/>
-				<key>taskuid</key>
-				<string>com.alfredapp.automation.core/argument-processing/argument.count</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.automation.task</string>
-			<key>uid</key>
-			<string>50DB02EF-3123-437D-B459-122809AE0F35</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1409,7 +1442,7 @@ The same modifiers apply. Separate command histories are created for commands ra
 		<key>0169CF13-E2F6-4290-9AEE-7EA0A9C36E26</key>
 		<dict>
 			<key>xpos</key>
-			<real>2420</real>
+			<real>2325</real>
 			<key>ypos</key>
 			<real>405</real>
 		</dict>
@@ -1443,12 +1476,21 @@ The same modifiers apply. Separate command histories are created for commands ra
 			<key>ypos</key>
 			<real>350</real>
 		</dict>
+		<key>3308B85C-8522-4EBA-BCC2-2B84D871BC3E</key>
+		<dict>
+			<key>note</key>
+			<string>Record output to check later if empty</string>
+			<key>xpos</key>
+			<real>2085</real>
+			<key>ypos</key>
+			<real>435</real>
+		</dict>
 		<key>3F93A272-944E-4E7D-9A46-073383C71390</key>
 		<dict>
 			<key>note</key>
 			<string>Use regex instead of empty string to avoid matching cases like a single empty line</string>
 			<key>xpos</key>
-			<real>2085</real>
+			<real>2520</real>
 			<key>ypos</key>
 			<real>425</real>
 		</dict>
@@ -1575,7 +1617,7 @@ The same modifiers apply. Separate command histories are created for commands ra
 		<key>951D4EB6-F244-446B-89CC-562922C41A5F</key>
 		<dict>
 			<key>xpos</key>
-			<real>2790</real>
+			<real>2850</real>
 			<key>ypos</key>
 			<real>405</real>
 		</dict>
@@ -1607,14 +1649,14 @@ The same modifiers apply. Separate command histories are created for commands ra
 			<key>note</key>
 			<string>Write history file</string>
 			<key>xpos</key>
-			<real>2610</real>
+			<real>2505</real>
 			<key>ypos</key>
 			<real>235</real>
 		</dict>
 		<key>D36F3109-AE3E-484C-9D15-3CA59586E6A8</key>
 		<dict>
 			<key>xpos</key>
-			<real>2235</real>
+			<real>2180</real>
 			<key>ypos</key>
 			<real>425</real>
 		</dict>
@@ -1642,7 +1684,7 @@ The same modifiers apply. Separate command histories are created for commands ra
 		<key>FFF9C1B9-5961-4167-8625-CB5393E611D8</key>
 		<dict>
 			<key>xpos</key>
-			<real>2610</real>
+			<real>2670</real>
 			<key>ypos</key>
 			<real>405</real>
 		</dict>
